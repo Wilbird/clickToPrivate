@@ -1,0 +1,44 @@
+{
+    "extensionName": {
+        "message": "Click To Private"
+    },
+    "extensionDescription": {
+        "message": "Shift + left-click opens the clicked link in a new private window. A click on the extension button opens the current page in a new private window."
+    },
+    "author": {
+        "message": "Willy S"
+    },
+    "stateDesc": {
+        "message": "This setting allows you to choose the private window size."
+    },
+    "stateTitle": {
+        "message": "Window size:"
+    },
+    "state": {
+        "message": "Select size in the list "
+    },
+    "state_0": {
+        "message": "normal"
+    },
+    "state_1": {
+        "message": "minimized"
+    },
+    "state_2": {
+        "message": "maximized"
+    },
+    "shiftClickTitle": {
+        "message": "Links opening:"
+    },
+    "shiftClickDesc": {
+        "message": "This setting allows you to open a link of the current page in private mode when using Shift + left-click on this link."
+    },
+    "shiftClick": {
+        "message": "Shift + Left-Click on a link "
+    },
+    "saveTitle": {
+        "message": "Save the new settings:"
+    },
+    "save": {
+        "message": "Save"
+    }
+}

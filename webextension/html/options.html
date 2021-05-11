@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/options.css">
+    </head>
+
+    <body>
+        <form>
+            <h3 id="L_stateTitle"></h3>
+            <p><em id="L_stateDesc"></em></p>
+            
+            <div class="align_colums">
+                <select id="state">
+                    <option value='normal' id="L_state_0"></option>
+                    <option value='minimized' id="L_state_1"></option>
+                    <option value='maximized' id="L_state_2"></option>
+                </select>
+                <label id="L_state"></label>
+            </div>
+
+            <h3 id="L_shiftClickTitle"></h3>
+            <p><em id="L_shiftClickDesc"></em></p>
+            <div class="align_colums">
+                <input type="checkbox" id="shiftClick">
+                <label id="L_shiftClick"></label>
+            </div>
+
+            <h3 id="L_saveTitle"></h3>
+            <div class="save_button">
+                <button type="submit" id="L_save"></button>
+            </div>
+        </form>
+
+        <script src="../js/settings.js"></script>
+        <script src="../js/options.js"></script>
+        
+    </body>
+</html>

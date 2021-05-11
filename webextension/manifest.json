@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "1.0",
+  "description": "__MSG_extensionDescription__",
+  "author": "__MSG_author__",
+  "homepage_url": "https://github.com/Wilbird/clickToPrivate",
+  "default_locale": "en",
+  "icons": {
+    "48": "icons/ctp-48.png",
+    "96": "icons/ctp-96.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "clickToPrivate",
+    "default_icon": "icons/ctp-48.png"
+  },
+  
+  "background": {
+    "scripts": [
+      "js/settings.js",
+      "js/background.js"
+    ]
+  },
+  
+  "options_ui": {
+    "page": "html/options.html",
+    "browser_style": true
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"],
+      "run_at": "document_start"
+    }
+  ]
+  
+}

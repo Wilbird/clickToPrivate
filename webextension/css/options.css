@@ -1,0 +1,41 @@
+
+body {
+    background: #fff;
+    color: #202023;
+  }
+  
+  h3 {
+    margin-block-start: 2.5rem;
+  }
+  
+  h3:first-of-type {
+    margin-block-start: 1rem;
+  }
+  
+  p,
+  label {
+    color: rgb(74, 74, 79);
+  }
+  
+  .align_colums {
+    display:grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 1.5rem;
+    align-items: center;
+  }
+  
+  div.save_button {
+    float: right;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #202023;
+      color: #fff;
+    }
+  
+    p,
+    label {
+      color: rgb(177, 177, 179);
+    }
+  }

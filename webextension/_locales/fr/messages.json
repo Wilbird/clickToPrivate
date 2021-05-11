@@ -1,0 +1,44 @@
+{
+    "extensionName": {
+        "message": "Click To Private"
+    },
+    "extensionDescription": {
+        "message": "Shift + clic-gauche ouvre le lien cliqué dans une fenêtre de navigation privée. Un clic sur le bouton de l'extension ouvre la page courante dans une fenêtre de navigation privée."
+    },
+    "author": {
+        "message": "Willy S"
+    },
+    "stateDesc": {
+        "message": "Ce paramètre permet de choisir le format de la fenêtre privée."
+    },
+    "stateTitle": {
+        "message": "Taille de la fenêtre :"
+    },
+    "state": {
+        "message": "Sélectionner un format dans la liste "
+    },
+    "state_0": {
+        "message": "normale"
+    },
+    "state_1": {
+        "message": "réduite"
+    },
+    "state_2": {
+        "message": "agrandie"
+    },
+    "shiftClickTitle": {
+        "message": "Ouverture des liens :"
+    },
+    "shiftClickDesc": {
+        "message": "Cocher cette case pour ouvrir la page dans une fenêtre privée quand l'utilisateur appuie sur Shift en cliquant sur un lien."
+    },
+    "shiftClick": {
+        "message": "Shift + clic-gauche sur un lien "
+    },
+    "saveTitle": {
+        "message": "Sauvegarder les modifications :"
+    },
+    "save": {
+        "message": "Enregistrer"
+    }
+}
