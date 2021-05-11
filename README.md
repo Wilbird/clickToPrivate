@@ -6,6 +6,9 @@ by Wilbird, 2021
 A Firefox extension that provides shortcuts to private browsing mode.
 
 
+## Releases
+Released versions can be downloaded from https://addons.mozilla.org/addon/click-to-private/
+
 ## Usage
 
 - Open the current tab in a private window with a click on the extension button ;
