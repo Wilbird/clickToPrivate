@@ -6,6 +6,9 @@ function handler(event) {
     if (!event.shiftKey) {
         return;
     }
+    if (event.ctrlKey) {
+        return;
+    }
     // left click ?
     if (event.button !== 0 &&
         event.buttons !== 0) {
