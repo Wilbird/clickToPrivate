@@ -26,6 +26,9 @@
     "state_2": {
         "message": "maximized"
     },
+    "state_3": {
+        "message": "same size"
+    },
     "shiftClickTitle": {
         "message": "Links opening:"
     },

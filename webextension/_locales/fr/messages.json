@@ -26,6 +26,9 @@
     "state_2": {
         "message": "agrandie"
     },
+    "state_3": {
+        "message": "même taille"
+    },
     "shiftClickTitle": {
         "message": "Ouverture des liens :"
     },
