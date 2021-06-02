@@ -14,7 +14,7 @@ function restoreOptions() {
     }
 
     buildOptionsPage(["stateDesc", "stateTitle", "state", "state_0", "state_1", "state_2", 
-        "shiftClickTitle", "shiftClickDesc", "shiftClick", "saveTitle", "save"]);
+        "state_3", "shiftClickTitle", "shiftClickDesc", "shiftClick", "saveTitle", "save"]);
     
     // Restore saved settings or defaults on the option page
     let getting = browser.storage.sync.get()

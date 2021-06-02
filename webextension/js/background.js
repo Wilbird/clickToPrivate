@@ -1,5 +1,6 @@
 let urlToOpen;
 let settings = {};
+let sourceWindow = {};
 
 function createNewWindowTab(isPrivate) {
 
@@ -18,6 +19,15 @@ function createNewWindowTab(isPrivate) {
       state: settings.state,
       incognito: isPrivate
     };
+    if (settings.state === 'same') {
+      tabParams.state = sourceWindow.state
+      if (sourceWindow.state === 'normal') {
+        tabParams.top = sourceWindow.top;
+        tabParams.left = sourceWindow.left;
+        tabParams.height = sourceWindow.height;
+        tabParams.width = sourceWindow.width;
+      }
+    }
     browser.windows.create(tabParams);
   } else {
     throw ('Protocol not supported !');
@@ -25,9 +35,24 @@ function createNewWindowTab(isPrivate) {
   
 }
 
+// Get size and position of the original window
+// then create the new window
+function getCurrentWindowThenCreateNewWindow(isPrivate) {
+  let gettingWindow = browser.windows.getCurrent();
+  gettingWindow.then((win) => {
+    sourceWindow.top = win.top;
+    sourceWindow.left = win.left;
+    sourceWindow.height = win.height;
+    sourceWindow.width = win.width;
+    sourceWindow.state = win.state;
+  }).then(() => {
+    createNewWindowTab(isPrivate);
+  });
+}
+
 function loadConfig() {
-  let getting = browser.storage.sync.get();
-  getting.then((settingsToRestore) => {
+  let gettingConfig = browser.storage.sync.get();
+  gettingConfig.then((settingsToRestore) => {
     // No saved setting at this time => defaults, else load saved settings
     if (settingsToRestore['state'] === undefined) {
       for (let thisSetting in defaultSettings) {
@@ -50,13 +75,13 @@ browser.storage.onChanged.addListener(loadConfig);
 // listen to browserAction icon
 browser.browserAction.onClicked.addListener(function(tab) {
   urlToOpen = tab.url;
-  createNewWindowTab(true);
+  getCurrentWindowThenCreateNewWindow(true);
 });
 
 // listen to content.js
-browser.runtime.onMessage.addListener(notify);
+browser.runtime.onMessage.addListener(clickFromContent);
 
-function notify(message) {
+function clickFromContent(message) {
   urlToOpen = message.url;
-  createNewWindowTab(settings.shiftClick);
+  getCurrentWindowThenCreateNewWindow(settings.shiftClick);
 }
