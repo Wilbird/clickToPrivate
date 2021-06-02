@@ -1,5 +1,5 @@
+![Icone clickToPrivate](webextension/icons/ctp-128.png)
 # clickToPrivate
-by Wilbird, 2021
 
 ---
 
@@ -7,7 +7,7 @@ A Firefox extension that provides shortcuts to private browsing mode.
 
 
 ## Releases
-Released versions can be downloaded from https://addons.mozilla.org/addon/click-to-private/
+Released versions can be downloaded from [Firefox add-ons](https://addons.mozilla.org/addon/click-to-private/)
 
 ## Usage
 
@@ -18,5 +18,5 @@ Released versions can be downloaded from https://addons.mozilla.org/addon/click-
 
 | Setting | Description |
 | ---------- | ----------- |
-| `Window size` | choose the private window size |
+| `Window size` | choose the private window size  (normal, minimized, maximized or same size) |
 | `Links opening` | uncheck to restore normal behavior (open link in a new non-private window) |
